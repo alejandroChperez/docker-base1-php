@@ -22,6 +22,6 @@ services:
       ports:
        - "8080:80" # Puerto para sitio
       expose:
-       - 80 #gases-medicinales
+       - 80 #puerto expuesto por docker
       depends_on:
        - php_fpm7
