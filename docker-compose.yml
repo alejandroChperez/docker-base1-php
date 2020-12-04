@@ -20,7 +20,7 @@ services:
       # #  Volumen para configuracion Default nginx
        - $PWD/nginx:/etc/nginx/conf.d
       ports:
-       - "80:80" # Puerto para sitio
+       - "8080:80" # Puerto para sitio
       expose:
        - 80 #gases-medicinales
       depends_on:
