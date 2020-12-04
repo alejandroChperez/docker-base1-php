@@ -1,0 +1,27 @@
+version: '3.2'
+services:
+  php_fpm7:
+      container_name: nombre_proyecto_PHP7.X
+      restart: always
+      build:
+          context: .
+          dockerfile: Dockerfile
+      volumes:
+       - /var/www/html/nombre_proyecto:/var/www/html/nombre_proyecto
+  web_nginx:
+      container_name: nombre_proyecto_NGINX
+      restart: always
+      image: nginx
+      volumes:
+      #  Volumen de sitio nombre_proyecto 
+       - /var/www/html/nombre_proyecto:/var/www/html/nombre_proyecto
+      #  Volumen para ver lo logs del sistema  
+       - $PWD/log/nginx:/var/log/nginx
+      # #  Volumen para configuracion Default nginx
+       - $PWD/nginx:/etc/nginx/conf.d
+      ports:
+       - "80:80" # Puerto para sitio
+      expose:
+       - 80 #gases-medicinales
+      depends_on:
+       - php_fpm7
