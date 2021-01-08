@@ -10,6 +10,10 @@ Primero se tiene que tener instalado Docker y Docker-compose.
 
 Después de clonar el proyecto y entrar a la carpeta del proyecto se debe realizar lo siguiente:
 
+### **Opcional**
+
+Un vez clonado este repositorio cambiarle el nombre de la carpeta para que sea facil de identificar.
+
 ### **Crear la carpeta Log**
 
 Esta carpeta se debe crear en la raiz del proyecto de docker para posteriormente ver los logs del sistema ya en ejecución. Dentro de su editor crear la carpeta log y dentro de la carpeta log crear otra carpeta llamada nginx. En la terminal ejecutar el siguiente comando.
